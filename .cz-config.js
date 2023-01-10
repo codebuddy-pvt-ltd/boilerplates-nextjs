@@ -1,3 +1,5 @@
+const scopes = [{ name: 'ui' }, { name: 'packages' }];
+
 module.exports = {
   types: [
     { value: ':sparkles: feat', name: '✨ feat:\tAdding a new feature' },
@@ -38,7 +40,13 @@ module.exports = {
   scopes: [{ name: 'ui' }, { name: 'packages' }],
 
   scopeOverrides: {
-    ':bug: fix': [{ name: 'merge' }, { name: 'style' }, { name: 'test' }, { name: 'hotfix' }],
+    ':bug: fix': [
+      ...scopes,
+      { name: 'merge' },
+      { name: 'style' },
+      { name: 'test' },
+      { name: 'hotfix' },
+    ],
   },
 
   allowCustomScopes: true,

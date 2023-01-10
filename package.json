@@ -6,10 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint:js": "next lint",
+    "lint:js": "eslint .",
     "lint:css": "stylelint \"**/*.css\"",
     "lint": "yarn lint:css && yarn lint:js",
-    "cm": "cz"
+    "cm": "cz",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@next/font": "13.1.1",
@@ -38,6 +39,8 @@
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "eslint-plugin-storybook": "^0.6.8",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.1.0",
     "prettier": "^2.8.2",
     "stylelint": "^14.16.1",
     "stylelint-config-prettier": "^9.0.4",
